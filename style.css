@@ -1,0 +1,36 @@
+body {
+  background-color: #f0f1f5;
+}
+
+.sidebar {
+  width: 220px;
+  min-height: 100vh;
+  background-color: #1a1c2e;
+}
+
+.sidebar .list-group-item {
+  background-color: transparent;
+  color: #c5c6d6;
+  border: none;
+  margin-bottom: 4px;
+  border-radius: 6px;
+}
+
+.sidebar .list-group-item:hover {
+  background-color: #2a2c45;
+  color: white;
+}
+
+.card {
+  border: none;
+  border-radius: 10px;
+  box-shadow: 0px 2px 5px rgba(0,0,0,0.1);
+}
+
+.service-row:hover {
+  background-color: #f8f9fa;
+}
+
+.content {
+  background-color: #f0f1f5;
+}

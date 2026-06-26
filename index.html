@@ -1,0 +1,146 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <title>PulseBoard</title>
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <link href="style.css" rel="stylesheet">
+</head>
+
+<body>
+  <div class="d-flex">
+    <div class="sidebar p-3">
+      <h4 class="text-white mb-4">PulseBoard</h4>
+      <div class="list-group">
+        <a href="#" class="list-group-item active">Overview</a>
+        <a href="#" class="list-group-item">Services</a>
+        <a href="#" class="list-group-item">Alerts <span class="badge bg-danger">3</span></a>
+        <a href="#" class="list-group-item">Logs</a>
+        <a href="#" class="list-group-item">Settings</a>
+      </div>
+    </div>
+    <div class="content p-4 w-100">
+      <div class="d-flex justify-content-between align-items-center mb-3">
+        <div>
+          <h2>Infrastructure Overview</h2>
+          <p class="text-muted">Region ap-south-1 . 12 hosts</p>
+        </div>
+        <button class="btn btn-primary" id="refreshBtn">Refresh</button>
+      </div>
+      <div class="row mb-4">
+        <div class="col-md-3">
+          <div class="card p-3">
+            <p class="text-muted">CPU LOAD</p>
+            <h2>72%</h2>
+            <div class="progress">
+              <div class="progress-bar bg-warning" style="width: 72%"></div>
+            </div>
+            <small class="text-muted">avg across 12 cores</small>
+          </div>
+        </div>
+        <div class="col-md-3">
+          <div class="card p-3">
+            <p class="text-muted">MEMORY</p>
+            <h2>58%</h2>
+            <div class="progress">
+              <div class="progress-bar bg-success" style="width: 58%"></div>
+            </div>
+            <small class="text-muted">37.1 / 64 GB used</small>
+          </div>
+        </div>
+        <div class="col-md-3">
+          <div class="card p-3">
+            <p class="text-muted">DISK I/O</p>
+            <h2>88%</h2>
+            <div class="progress">
+              <div class="progress-bar bg-danger" style="width: 88%"></div>
+            </div>
+            <small class="text-muted">nearing capacity</small>
+          </div>
+        </div>
+        <div class="col-md-3">
+          <div class="card p-3">
+            <p class="text-muted">NETWORK</p>
+            <h2>34%</h2>
+            <div class="progress">
+              <div class="progress-bar bg-success" style="width: 34%"></div>
+            </div>
+            <small class="text-muted">412 Mbps inbound</small>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-8">
+          <div class="card p-3">
+            <h5>Services</h5>
+            <div class="list-group">
+              <div class="list-group-item d-flex justify-content-between align-items-center service-row">
+                <span>🟢 api-gateway
+                  <small class="text-muted">web-01</small></span>
+                <span>42 ms</span>
+                <span class="badge bg-success">Operational</span>
+              </div>
+              <div class="list-group-item d-flex justify-content-between align-items-center service-row" "
+                >
+                  <span
+                    >🟢 auth-service
+                    <small class=" text-muted">web-02</small></span>
+                <span>61 ms</span>
+                <span class="badge bg-success">Operational</span>
+              </div>
+              <div class="list-group-item d-flex justify-content-between align-items-center service-row" "
+                >
+                  <span
+                    >🟡 payments <small class=" text-muted">pay-01</small></span>
+                <span>310 ms</span>
+                <span class="badge bg-warning text-dark">Degraded</span>
+              </div>
+              <div class="list-group-item d-flex justify-content-between align-items-center service-row">
+                <span>🔴 db-primary <small class="text-muted">db-01</small></span>
+                <span>timeout</span>
+                <span class="badge bg-danger">Down</span>
+              </div>
+              <div class="list-group-item d-flex justify-content-between align-items-center service-row" "
+                >
+                  <span
+                    >🟢 search <small class=" text-muted">srch-01</small></span>
+                <span>88 ms</span>
+                <span class="badge bg-success">Operational</span>
+              </div>
+              <div class="list-group-item d-flex justify-content-between align-items-center service-row" "
+                >
+                  <span
+                    >🟢 cdn-edge <small class=" text-muted">edge-09</small></span>
+                <span>19 ms</span>
+                <div class="badge bg-success">Operational</div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="card p-3">
+            <h5>Recent Alerts</h5>
+            <div class="mb-2">
+              <span class="badge bg-danger">CRIT</span> Disk I/O above 85% on
+              db-primary
+              <div class="text-muted small">2 min ago</div>
+            </div>
+            <div class="mb-2">
+              <span class="badge bg-warning text-dark">WARN</span> CPU spike
+              on web-03
+              <div class="text-muted small">14 min ago</div>
+            </div>
+            <div class="mb-2">
+              <span class="badge bg-info text-dark">INFO</span> Auto-scaling
+              added 1 node
+              <div class="text-muted small">38 min ago</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+
+</html>
